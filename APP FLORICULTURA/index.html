@@ -5,13 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jardim de Belas Flores</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <header>
+  <div class="cover"> 
+    <img src="/img/background-principal.jpg" alt="fundo de flores" class="cover-background parallax-container">
+    <div class="cover-imagem">
+      <div class="mobile">
+        <img src="/img/background-principal.jpg" alt="fundo de flores2" class="mobilePicture">
+      </div> 
+    </div>
+  </div>
+  <header>
         <nav>
           <div class="logo-container">
+            <div class="">
             <img src="/img/flower-icon.png" alt="Flor" class="flower-icon">
             <div class="logo">
               Jardim de Belas Flores
@@ -23,33 +36,22 @@
             <li><a href="#">Promoções</a></li>
             <li><a href="#">Contato</a></li>
           </ul>
+          <div class="header-icons">
+            <i class='bx bx-cart'></i>
+            <div id="menu">
+              <i class='bx bx-menu' ></i>
+            </div>
+          </div>
         </nav>
-      </header>
+  </header>
+      <script>
+      // Script para tornar o menu responsivo funcional
+      const flowerIcon = document.getElementById('flower-icon');
+      const menu = document.getElementById('menu');
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Flores em Destaque</h1>
-        <p>Confira nossas flores em promoção esta semana!</p>
-        <a href="#" class="btn">Ver Promoções</a>
-      </div>
-    </section>
-
-    <section class="categories">
-      <h2>Categorias de Flores</h2>
-      <div class="category-card">
-        <img src="category1.jpg" alt="Categoria 1">
-        <h3>Categoria 1</h3>
-        <p>Descrição da Categoria 1.</p>
-      </div>
-      <div class="category-card">
-        <img src="category2.jpg" alt="Categoria 2">
-        <h3>Categoria 2</h3>
-        <p>Descrição da Categoria 2.</p>
-      </div>
-      <!-- Adicione mais categorias aqui -->
-    </section>
-  </main>
+      flowerIcon.addEventListener('click', () => {
+      menu.classList.toggle('responsive');
+      });
+      </script>
 </body>
-
 </html>
